@@ -71,8 +71,6 @@ instance NoThunks a => NoThunks (K a b) where
   showTypeOf _ = showTypeOf (Proxy @a)
   wNoThunks ctxt (K a) = wNoThunks ("K":ctxt) a
 
-instance NoThunks a => NoThunks (Sum a)
-
 {-------------------------------------------------------------------------------
   fs-api
 -------------------------------------------------------------------------------}
